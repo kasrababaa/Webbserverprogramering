@@ -9,7 +9,8 @@
 <body>
 <?php
     echo "<p>Hej<p>";
-    echo "<p>Hej igen<p>"
+    echo "<p>Hej igen<p>";
+    echo "<p>YO<p>";
 ?>
 </body>
 </html>
