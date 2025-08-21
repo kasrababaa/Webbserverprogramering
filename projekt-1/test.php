@@ -1,5 +1,5 @@
 <?php
-    $text = "Type shit dawg";
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,27 +10,28 @@
     <link rel="stylesheet" href="test.css">
 </head>
 <body>
-<?php
-    echo "<p>Hej</p>";
-    echo "<p>Hej igen<p>";
-    echo "<p>YO<p>";
-    echo "<p>" . $text . "</p>";
-?>
-<p>Vad heter du akhi?</p>
+
+
+
+<div class="allt">
+    <h1>Skriv nåt bror</h1>
 <form action="" method="get">
     <input type="text" name="secret" id="">
     <input type="submit" value="Tryck yäni">
 </form>
 
-<p>
     <?php
         if (isset($_GET["secret"])) {
-            if ("secret" == "pizza") {
+            $input = $_GET["secret"];
+
+            if ($input == "pizza") {
                 echo "<p>Pizza är gott</p>";
             }
-            
+            elseif ($input == "LTG") {
+                echo '<img src="LTG.png" alt="skolan">';
+            }
         }
     ?>
-</p>
+</div>
 </body>
 </html>

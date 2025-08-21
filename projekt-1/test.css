@@ -1,3 +1,36 @@
-p {
-    color: red;
+body {
+    background-color: rgb(190, 234, 245);
+    color: #8a1f1f;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+.allt, form, p {
+    margin: auto;
+    max-width: 40rem;
+    text-align: center;
+    padding: 1rem;
+    
+}
+
+.allt {
+    margin-top: 10rem;
+}
+
+input[type="text"] {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border-color: transparent;
+}
+
+input[type="submit"] {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    background-color: antiquewhite;
+    border-color: transparent;
+}
+
+input[type="submit"]:hover {
+    color: #8a1f1f;
+    
 }
