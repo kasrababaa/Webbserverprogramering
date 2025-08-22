@@ -15,10 +15,12 @@
 
 <div class="allt">
     <h1>Skriv nåt bror</h1>
-<form action="" method="get">
-    <input type="text" name="secret" id="">
-    <input type="submit" value="Tryck yäni">
-</form>
+
+    <form action="" method="get">
+        <input type="text" name="secret" id="">
+        <input type="number" name="amount" id="">
+        <input type="submit" value="Tryck yäni">
+    </form>
 
     <?php
         if (isset($_GET["secret"])) {
@@ -32,6 +34,25 @@
             }
         }
     ?>
+
+    <h1>Skriv ett tal azizam</h1>
+
+
+    <?php
+        if (isset($_GET["amount"])) {
+            $amount = $_GET["amount"];
+
+            for ($i=0; $i < $amount ; $i++) { 
+                echo "<p>" . $_GET['secret'] . "</p>";  
+            }
+        }
+            
+        
+    ?>
+
 </div>
+
+
+
 </body>
 </html>

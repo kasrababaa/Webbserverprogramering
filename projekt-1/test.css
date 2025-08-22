@@ -23,6 +23,12 @@ input[type="text"] {
     border-color: transparent;
 }
 
+input[type="number"] {
+     padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border-color: transparent;  
+}
+
 input[type="submit"] {
     padding: 0.5rem 1rem;
     border-radius: 1rem;
