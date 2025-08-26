@@ -43,7 +43,7 @@
             $amount = $_GET["amount"];
 
             for ($i=0; $i < $amount ; $i++) { 
-                echo "<p>" . $_GET['secret'] . "</p>";  
+                echo "<p>" . htmlentities($_GET['secret']) . "</p>";  
             }
         }
             
