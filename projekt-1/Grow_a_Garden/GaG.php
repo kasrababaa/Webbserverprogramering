@@ -5,7 +5,23 @@ if (isset($_GET['reset'])) {
     header('Location: ' .$_SERVER['PHP_SELF']);
     exit;
 }
-$_SESSION['money'] = 10;
+
+if (!isset($_GET['money'])) {
+    $_SESSION['money'] = 20;
+}
+
+if (!isset($_GET['seeds'])) {
+    $_SESSION['seeds'] = array();
+}
+
+$seedPrices = array();
+$seedPrices['Carrot'] = 10;
+
+if (isset($_GET['buy'])) {
+    $seedsToBuy = $_GET['buy'];
+    array_push($_SESSION['seeds'], $seedsToBuy);
+    $_SESSION['money'] -= $seedPrices[$seedsToBuy];
+}
 
 ?>
 <!DOCTYPE html>
@@ -26,7 +42,11 @@ $_SESSION['money'] = 10;
 <h2>Wallet: </h2>
 
 <h2>Store</h2>
-
+    <section>
+        <?php foreach ($seedPrices as $key => $value) : ?>
+            <div><a href="?buy=<?= $key ?>"></a></div>
+        <?php endforeach; ?>
+    </section>
 <h2>Inventory</h2>
 
 </body>
