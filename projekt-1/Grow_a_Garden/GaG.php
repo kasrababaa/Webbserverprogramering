@@ -33,13 +33,11 @@ if (isset($_GET['buy'])) {
     <link rel="stylesheet" href="GaG.css">
 </head>
 <body>
-<pre>
-    <?= print_r[$_SESSION] ?>
-</pre>
+
 
 <h1>Grow a Garden</h1>
 <a href="?reset">Reset game om du vill yäni</a>
-<h2>Wallet: </h2>
+<h2>Wallet: <?= $_SESSION['money'] ?> $</h2>
 
 <h2>Store</h2>
     <section>
