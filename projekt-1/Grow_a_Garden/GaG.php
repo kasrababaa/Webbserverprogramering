@@ -6,16 +6,17 @@ if (isset($_GET['reset'])) {
     exit;
 }
 
-if (!isset($_GET['money'])) {
+if (!isset($_SESSION['money'])) {
     $_SESSION['money'] = 20;
 }
 
-if (!isset($_GET['seeds'])) {
+if (!isset($_SESSION['seeds'])) {
     $_SESSION['seeds'] = array();
 }
 
 $seedPrices = array();
 $seedPrices['Carrot'] = 10;
+
 
 if (isset($_GET['buy'])) {
     $seedsToBuy = $_GET['buy'];
@@ -37,15 +38,30 @@ if (isset($_GET['buy'])) {
 
 <h1>Grow a Garden</h1>
 <a href="?reset">Reset game om du vill yäni</a>
-<h2>Wallet: <?= $_SESSION['money'] ?> $</h2>
+
+<?php if (!$_SESSION['money'] >= 0) : ?>
+        <h2>Wallet: <?= $_SESSION['money'] ?> $</h2>        
+<?php else : ?>
+<script>
+    alert("Du har ingen para akhi");
+</script>
+
+<?php endif; ?>
+
 
 <h2>Store</h2>
     <section>
         <?php foreach ($seedPrices as $key => $value) : ?>
-            <div><a href="?buy=<?= $key ?>"></a></div>
+            <div><a href="?buy=<?= $key ?>"><?= $key ?></a> - <?= $value ?>$</div>
         <?php endforeach; ?>
     </section>
 <h2>Inventory</h2>
-
+    <section>
+        <?php foreach ($_SESSION['seeds'] as $key => $value) : ?>
+            <div>
+                <?= $value ?> 
+            </div>
+        <?php endforeach; ?>
+    </section>
 </body>
 </html>
