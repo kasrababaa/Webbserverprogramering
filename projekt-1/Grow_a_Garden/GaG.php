@@ -14,6 +14,10 @@ if (!isset($_SESSION['seeds'])) {
     $_SESSION['seeds'] = array();
 }
 
+if (!isset($_SESSION['plots'])) {
+    $_SESSION['plots'] = array();
+}
+
 $seedPrices = array();
 $seedPrices['Carrot'] = 10;
 
@@ -22,6 +26,14 @@ if (isset($_GET['buy'])) {
     $seedsToBuy = $_GET['buy'];
     array_push($_SESSION['seeds'], $seedsToBuy);
     $_SESSION['money'] -= $seedPrices[$seedsToBuy];
+}
+
+if (isset($_GET['plant'])) {
+    $seedToPlant = $_GET['plant'];
+    $seedName = $_SESSION['seeds'][$seedToPlant];
+    unset($_SESSION['seeds'][$seedToPlant]);
+    array_push($_SESSION['plots'], $seedName);
+
 }
 
 ?>
@@ -39,7 +51,7 @@ if (isset($_GET['buy'])) {
 <h1>Grow a Garden</h1>
 <a href="?reset">Reset game om du vill yäni</a>
 
-<?php if (!$_SESSION['money'] >= 0) : ?>
+<?php if ($_SESSION['money'] >= 0) : ?>
         <h2>Wallet: <?= $_SESSION['money'] ?> $</h2>        
 <?php else : ?>
 <script>
@@ -52,14 +64,16 @@ if (isset($_GET['buy'])) {
 <h2>Store</h2>
     <section>
         <?php foreach ($seedPrices as $key => $value) : ?>
-            <div><a href="?buy=<?= $key ?>"><?= $key ?></a> - <?= $value ?>$</div>
+            <div class="plant">
+                <a href="?buy=<?= $key ?>"><?= $key ?></a> - <?= $value ?>$
+            </div>
         <?php endforeach; ?>
     </section>
 <h2>Inventory</h2>
     <section>
         <?php foreach ($_SESSION['seeds'] as $key => $value) : ?>
             <div>
-                <?= $value ?> 
+                <?= htmlentities($value) ?> - <a href="?plant=<?= $key ?>">Plant</a>
             </div>
         <?php endforeach; ?>
     </section>

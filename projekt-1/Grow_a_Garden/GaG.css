@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(253, 255, 234);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    
+}
+
+.plant {
+    border: solid 1px black;
+    height: 15rem;
+    width: 10rem;
+    padding: 1rem;
+    
+}
+
+
+
+
