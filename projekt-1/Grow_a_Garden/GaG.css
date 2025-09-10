@@ -1,19 +1,57 @@
-body {
-    background-color: rgb(253, 255, 234);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+* {
+    box-sizing: border-box;
 }
 
+body {
+    background-color: rgb(113, 200, 244);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+a {
+    color: orange;
+}
 h1 {
     text-align: center;
     
 }
 
 .plant {
+    display: flex;
     border: solid 1px black;
     height: 15rem;
     width: 10rem;
     padding: 1rem;
+    background-color: rgb(24, 56, 94);
+}
+
+.typallt {
+    margin: auto;
+    max-width: 40rem;
+    text-align: center;
+    color: rgb(113, 200, 244);
+}
+
+.inventory {
     
+    border: solid 1px black;
+    height: 15rem;
+    width: 10rem;
+    padding: 1rem;
+    background-color: rgb(24, 56, 94);
+    margin: 1rem;
+}
+
+.inv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 15;
+    justify-content: center;
+}
+
+.invimg {
+    padding-top: 3rem;
 }
 
 

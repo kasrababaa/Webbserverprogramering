@@ -7,7 +7,7 @@ if (isset($_GET['reset'])) {
 }
 
 if (!isset($_SESSION['money'])) {
-    $_SESSION['money'] = 20;
+    $_SESSION['money'] = 100;
 }
 
 if (!isset($_SESSION['seeds'])) {
@@ -61,7 +61,8 @@ if (isset($_GET['plant'])) {
 <?php endif; ?>
 
 
-<h2>Store</h2>
+<div class="typallt">
+    <h2>Store</h2>
     <section>
         <?php foreach ($seedPrices as $key => $value) : ?>
             <div class="plant">
@@ -71,11 +72,16 @@ if (isset($_GET['plant'])) {
     </section>
 <h2>Inventory</h2>
     <section>
-        <?php foreach ($_SESSION['seeds'] as $key => $value) : ?>
-            <div>
+        <div class="inv">
+            <?php foreach ($_SESSION['seeds'] as $key => $value) : ?>
+            <div class = "inventory">
                 <?= htmlentities($value) ?> - <a href="?plant=<?= $key ?>">Plant</a>
+                <div class="invimg"><img src="images/carrot.png" alt=""></div>
             </div>
         <?php endforeach; ?>
+        </div>
+        
     </section>
+</div>
 </body>
 </html>
