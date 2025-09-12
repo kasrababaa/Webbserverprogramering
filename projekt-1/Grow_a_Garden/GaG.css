@@ -13,27 +13,19 @@ a {
 }
 h1 {
     text-align: center;
-    
-}
-
-.plant {
-    display: flex;
-    border: solid 1px black;
-    height: 15rem;
-    width: 10rem;
-    padding: 1rem;
-    background-color: rgb(24, 56, 94);
 }
 
 .typallt {
     margin: auto;
     max-width: 40rem;
     text-align: center;
-    color: rgb(113, 200, 244);
+}
+
+h2 {
+    color: black;
 }
 
 .inventory {
-    
     border: solid 1px black;
     height: 15rem;
     width: 10rem;
@@ -43,6 +35,7 @@ h1 {
 }
 
 .inv {
+    background-color: forestgreen;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -52,6 +45,11 @@ h1 {
 
 .invimg {
     padding-top: 3rem;
+}
+
+img {
+    width: 121px;
+    height: 121px;
 }
 
 

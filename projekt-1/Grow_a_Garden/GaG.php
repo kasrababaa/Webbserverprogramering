@@ -19,7 +19,13 @@ if (!isset($_SESSION['plots'])) {
 }
 
 $seedPrices = array();
+$seedPrices['Cucumber'] = 5;
 $seedPrices['Carrot'] = 10;
+$seedPrices['Tomato'] = 15;
+
+
+
+ 
 
 
 if (isset($_GET['buy'])) {
@@ -63,11 +69,12 @@ if (isset($_GET['plant'])) {
 
 <div class="typallt">
     <h2>Store</h2>
-    <section>
+    <section class="inv">
         <?php foreach ($seedPrices as $key => $value) : ?>
-            <div class="plant">
+            <div class="inventory">
                 <a href="?buy=<?= $key ?>"><?= $key ?></a> - <?= $value ?>$
             </div>
+            
         <?php endforeach; ?>
     </section>
 <h2>Inventory</h2>
@@ -76,7 +83,7 @@ if (isset($_GET['plant'])) {
             <?php foreach ($_SESSION['seeds'] as $key => $value) : ?>
             <div class = "inventory">
                 <?= htmlentities($value) ?> - <a href="?plant=<?= $key ?>">Plant</a>
-                <div class="invimg"><img src="images/carrot.png" alt=""></div>
+                <div class="invimg"><img src="images/<?=$value?>.png" alt=""></div>
             </div>
         <?php endforeach; ?>
         </div>
