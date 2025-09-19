@@ -53,8 +53,10 @@ if (isset($_GET['plant'])) {
 </head>
 <body>
 
+<div class="rubrik">
+    <h1>Grow a Garden</h1>
+</div>
 
-<h1>Grow a Garden</h1>
 <a href="?reset">Reset game om du vill yäni</a>
 
 <?php if ($_SESSION['money'] >= 0) : ?>
@@ -87,7 +89,6 @@ if (isset($_GET['plant'])) {
             </div>
         <?php endforeach; ?>
         </div>
-        
     </section>
 </div>
 </body>
