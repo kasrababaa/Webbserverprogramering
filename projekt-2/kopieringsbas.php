@@ -3,7 +3,7 @@
 // TILL projekt-2-app.php
 
 // Database connection
-$dsn = "sqlite:" . __DIR__ . "/projekt-2.db";
+$dsn = "sqlite:" . __DIR__ . "/projekt2.db";
 
 try {
     $pdo = new PDO($dsn);

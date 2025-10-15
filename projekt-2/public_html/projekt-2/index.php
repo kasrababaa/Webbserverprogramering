@@ -14,6 +14,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Anslagstavlan</title>
 </head>
 <body>
@@ -24,7 +25,7 @@
     ?>
 
     <pre>
-        <?= htmlentities(print_r("")) ?>
+        <?= h(print_r("")) ?>
     </pre>
 
     <?php endif; ?>
@@ -32,7 +33,7 @@
     <h1>Anslagstavlan</h1>
 <main>
     <?php foreach ($result as $key => $value) : ?>
-        <div>
+        <div class="post">
             <h2>
                 <?= h($value['Title']) ?>
             </h2>
