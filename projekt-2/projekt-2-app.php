@@ -16,3 +16,6 @@ try {
 function h($text) {
     return htmlspecialchars($text);
 }
+
+$includeDir = __DIR__ . "/projekt-2-includes";
+$title = "Anslagstavlan";
