@@ -74,9 +74,9 @@ require($includeDir . "/header.php");
 
         <?php foreach ($result3 as $key => $value) : ?>
             <tr>
-                <td><?= $value['FirstName'] . ' ' . ['LastName']?></td>
+                <td><a href="student.php?id=<?= $value['StudentId'] ?>"> <?= $value['FirstName']?> <?=$value['LastName']?> </a></td>
                 <td><?= $value['Name'] ?></td>
-                <td><?= $value['TeacherName'] ?></td>
+                <td><?= $value['FirstName:1'] ?> <?= $value['LastName:1'] ?></td>
             </tr>
         <?php endforeach; ?>
     </table>
