@@ -4,8 +4,8 @@ require_once("../../projekt-3-app.php");
 
 $checkStudentStmt = $pdo->prepare("SELECT * FROM StudentsClasses WHERE StudentId = :StudentId AND ClassId = :ClassId");
 $checkStudentStmt->execute([
-    "StudentId" => $_POST['student'],
-    "ClassId" => $_POST['class']
+    "StudentId" => $_POST['studentId'],
+    "ClassId" => $_POST['classId']
 
 ]);
 
@@ -16,11 +16,11 @@ if ($checkStudentResult != false) {
     exit;
 }
 
-$addStudentClassStmt = $pdo -> prepare("INSERT INTO StudentsClasses (StudentId, ClassId) Values (:StudentId , :ClassID)");
+$addStudentClassStmt = $pdo -> prepare("INSERT INTO StudentsClasses (StudentId, ClassId) Values (:StudentId , :ClassId)");
 
 $addStudentClassStmt -> execute ([
-    "StudentId" => $_POST['student'],
-    "ClassId" => $_POST['class']
+    "StudentId" => $_POST['studentId'],
+    "ClassId" => $_POST['classId']
 ]);
 
-header ("Loacation : student.php?id=" . $_POST['student']);
+header ("Location: student.php?id=" . $_POST['studentId']);
