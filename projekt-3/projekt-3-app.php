@@ -17,3 +17,5 @@ function h($text) {
 
 $includeDir = __DIR__ . "/projekt-3-includes";
 $title = "Lindholmsskolan";
+
+require_once(__DIR__ . "/projekt-3-config.php");

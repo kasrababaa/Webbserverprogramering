@@ -1,6 +1,6 @@
 <?php
 
-require_once("../../projekt-3-app.php");
+require_once("../../../projekt-3-app.php");
 
 require($includeDir."/header.php");
 

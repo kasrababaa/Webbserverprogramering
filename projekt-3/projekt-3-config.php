@@ -1,0 +1,6 @@
+<?php
+
+//Lokalt
+$siteurl = "";
+
+//Webbserver
