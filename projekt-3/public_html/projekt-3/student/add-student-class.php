@@ -8,7 +8,7 @@ require($includeDir."/header.php");
 
 <main>
     <p>
-        Vill du lägga till studenten med STudentId <?= $_GET['student'] ?> till kursen med ClassId <?= $_GET['class'] ?>?
+        Vill du lägga till studenten med StudentId <?= $_GET['student'] ?> till kursen med ClassId <?= $_GET['class'] ?>?
     </p>
 
     <form action="add-student-class-formhandler.php" method="post">

@@ -63,7 +63,7 @@ require($includeDir . "/header.php");
 
             if (!in_array($value['ClassId'], $studentsClassesResult)): ?>
 
-                <?= $value['Name'] ?> <a href="add-student-class.php?class=<?= $value['ClassId'] ?>&student=<?= $studentInfoResult['StudentId'] ?>">+</a> <br><?php
+                <?= $value['Name'] ?> <a href="student/add-student-class.php?class=<?= $value['ClassId'] ?>&student=<?= $studentInfoResult['StudentId'] ?>">+</a> <br><?php
             endif;
         }
         ?>

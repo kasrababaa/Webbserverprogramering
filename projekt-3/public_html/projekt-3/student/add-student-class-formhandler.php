@@ -1,6 +1,6 @@
 <?php
 
-require_once("../../projekt-3-app.php");
+require_once("../../../projekt-3-app.php");
 
 $checkStudentStmt = $pdo->prepare("SELECT * FROM StudentsClasses WHERE StudentId = :StudentId AND ClassId = :ClassId");
 $checkStudentStmt->execute([
@@ -23,4 +23,4 @@ $addStudentClassStmt -> execute ([
     "ClassId" => $_POST['classId']
 ]);
 
-header ("Location: student.php?id=" . $_POST['studentId']);
+header ("Location: " . $siteurl . "student.php?id=" . $_POST['studentId']);
