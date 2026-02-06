@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exempelsida med Twig</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main>
+    <h1>Exempelsida med Twig</h1>
+    <div>
+      Här visas värdet av variabeln {{ namn }}
+    </div>
+
+    <h2>Allt i en lista</h2>
+    <ul>
+    {% for item in exempelLista %}
+      <li>{{ item }}</li>
+    {% endfor %}
+    </ul>
+
+  </main>
+  
+</body>
+</html>
