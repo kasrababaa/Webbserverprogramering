@@ -29,3 +29,5 @@ spl_autoload_register(function ($classname)
 // Inställningar för Twig
 $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/templates');
 $twig = new \Twig\Environment($loader);
+
+$view = [];
