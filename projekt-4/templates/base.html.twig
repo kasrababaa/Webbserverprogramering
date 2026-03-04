@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>  
+  {% block head %}
+    
+  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exempelsida med Twig</title>
+    <title>{% block title %}Dagbok med Twig{% endblock %}</title>
     <link rel="stylesheet" href="style.css">
+    {% endblock %}
 </head>
 <body>
   <main>
-      
+    {% block main %}{% endblock %}
   </main>
+  
 </body>
 </html>

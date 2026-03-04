@@ -1,29 +1,21 @@
-<!DOCTYPE html>
-<html lang="sv">
-<head>  
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exempelsida med Twig</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  
+{% extends "base.html.twig" %}
 
-  <main>
+{% block title %}Exempelsida med Twig{% endblock %}
+
+{% block main %}
     <h1>Exempelsida med Twig</h1>
     <div>
       Här visas värdet av variabeln namn: {{ namn }}
     </div>
 
     <h2>Allt i en lista</h2>
+    
     <ul>
     {% for item in users %}
       <li>{{ item.UserId }} {{ item.Username }}</li>
     {% endfor %}
     </ul>
-    
+{% endblock %}
 
-  </main>
+
   
-</body>
-</html>
